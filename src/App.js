@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import logo from './logosims.svg';
+import GroupedSelect from './components/skills';
+import ScrollableTabsButtonForce from './components/commands';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <br></br>
+        <img src={logo} alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Pour saisir un code en jeu, appuyez sur <code>CTRL + MAJ + C</code> et tapez <code>testingcheats on</code>.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ScrollableTabsButtonForce/>
+        <br></br>
       </header>
+    <div className="footer"></div>
     </div>
   );
 }
