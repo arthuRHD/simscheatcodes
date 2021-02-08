@@ -10,17 +10,24 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    borderRadius: 10,
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+  },
+  command: {
+    color: 'green',
+    fontFamily: 'monospace',
+    fontWeight: 'bold',
+    fontSize: 15,
   },
 }));
 
 export default function CommandDetail(props) {
   const classes = useStyles();
 
-    return (<Accordion>
+    return (<Accordion className={classes.root}>
         <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls={props.id + "-content"}
@@ -29,7 +36,7 @@ export default function CommandDetail(props) {
             <Typography className={classes.heading}>{props.summary}</Typography>
         </AccordionSummary>
         <AccordionDetails>
-            <Typography><strong>{props.command}</strong></Typography>
+            <Typography className={classes.command}>{props.command}</Typography>
         </AccordionDetails>
     </Accordion>);
 }

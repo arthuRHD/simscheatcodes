@@ -1,5 +1,4 @@
-import logo from './logosims.svg';
-import GroupedSelect from './components/skills';
+import Logo from './components/mainLogo';
 import ScrollableTabsButtonForce from './components/commands';
 import './App.css';
 
@@ -8,9 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <br></br>
-        <img src={logo} alt="logo" />
+        <Logo/>
         <p>
-          Pour saisir un code en jeu, appuyez sur <code>CTRL + MAJ + C</code> et tapez <code>testingcheats on</code>.
+          Pour saisir un code en jeu, appuyez sur <code>CTRL + MAJ + C</code> et tapez <code>testingCheats on</code>.
         </p>
         <ScrollableTabsButtonForce/>
         <br></br>
